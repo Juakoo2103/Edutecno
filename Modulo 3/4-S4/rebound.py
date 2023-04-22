@@ -19,4 +19,9 @@ print(conjunto)
 
 #boolean
 
-boleanoFalse
+boleanoFalse = False
+
+listaFalse = [boleanoFalse, conjunto]
+
+print(listaFalse)
+
