@@ -10,7 +10,7 @@ for i in range(1, numero):
     elif i % 2 != 0:
         print(f'el numero {i} es impar')
 
-print('----------------------------------------------------------------') """
+print('----------------------------------------------------------------')
 
 
 frutas = ['mango', 'banana', 'pera']
@@ -19,7 +19,23 @@ for fruta in frutas:
     print(fruta)
 
 print('----------------------------------------------------------------')
+"""
+
+# while se evalua la condicion siempre True a menos que se cambie
+
+i = 0
+while i <= 10:
+    i += 1
+    print(f'imprimiendo el valor de {i}')
 
 
-palabra = "hola mundo"
-print(palabra.find('a'))
+print('----------------------------------------------------------------')
+
+i = 0
+while i <= 10:
+    i += 1
+    if i % 2 == 0:
+        continue
+    print(f'ocupando continue {i}')
+
+print('----------------------------------------------------------------')
