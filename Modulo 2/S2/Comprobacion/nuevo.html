@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reserva de Hora</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form>
+		<h1>Reserva de Hora</h1> 
+        <button id="dark-mode-toggle " type="button"><i class="fas fa-sun"></i><i class="fas fa-moon dark-mode-icon"></i></button>
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" name="nombre" required>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+		<label for="telefono">Teléfono:</label>
+		<input type="tel" id="telefono" name="telefono" required>
+		<label for="fecha">Fecha:</label>
+		<input type="date" id="fecha" name="fecha" required>
+		<label for="hora">Hora:</label>
+		<input type="time" id="hora" name="hora" required>
+		<label for="especialidad">Especialidad:</label>
+		<select id="especialidad" name="especialidad" required>
+			<option value="">Seleccione una especialidad</option>
+			<option value="medicina_interna">Medicina Interna</option>
+			<option value="medicina_general">Medicina General</option>
+			<option value="traumatologia">Traumatología</option>
+			<option value="nutricionista">Nutricionista</option>
+		</select>
+		<label for="mensaje">Mensaje:</label>
+		<textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+		<input type="submit" value="Enviar">
+	</form>	
+	<script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const button = document.getElementById("dark-mode-toggle");
+            const icon = document.getElementById("dark-mode-icon");
+        
+            body.classList.toggle("dark-mode");
+            if (body.classList.contains("dark-mode")) {
+                icon.classList.remove("fa-moon-o");
+                icon.classList.add("fa-sun-o");
+                button.setAttribute("title", "Cambiar a modo claro");
+            } else {
+                icon.classList.remove("fa-sun-o");
+                icon.classList.add("fa-moon-o");
+                button.setAttribute("title", "Cambiar a modo oscuro");
+            }
+        }
+        </script>
+        
+</body>
+</html>
