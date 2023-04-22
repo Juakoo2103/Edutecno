@@ -35,4 +35,6 @@ pacientes = {
     'paciente4': {'name': "Luisa" ,'edad': 22, 'peso': 75}
 }
 
-print(pacientes)
+for key, value in pacientes.items():
+    print(f"Paciente {key}:")
+    print(f"Nombre: {value['name']}\nEdad: {value['edad']}\nPeso: {value['peso']}\n")
