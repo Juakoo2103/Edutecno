@@ -1,15 +1,15 @@
 import math
-#Comenzando con el lenguaje python
+# Comenzando con el lenguaje python
 print("helloworld: python")
 
-#Para crear una variable solo se debe crear la palabra y el valor asociado a la variable
+# Para crear una variable solo se debe crear la palabra y el valor asociado a la variable
 
 cadena = "hola mundo"
 
-#ejemplo aca se imprime la variable cadena y muestra el valor de la variable 
+# ejemplo aca se imprime la variable cadena y muestra el valor de la variable
 print(cadena)
 
-#Aca se imprime segun lo importado en el lenguaje python
+# Aca se imprime segun lo importado en el lenguaje python
 
 print(math.pi)
 
@@ -27,11 +27,9 @@ print(math.exp(2))
 
 print(math.expm1(2))
 
-for i in range(1,10):
+for i in range(1, 10):
     if i % 2 == 0:
-        print (f"el numero es par {i}")
+        print(f"el numero es par {i}")
     else:
-        print (f"el numero es impar {i}")
-        
-
+        print(f"el numero es impar {i}")
 

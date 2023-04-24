@@ -13,7 +13,7 @@ palabra = "paralelepipedo"
 consonantes = ""
 
 for i in range(len(palabra)):
-    if palabra[i] not in "aeiouAEIOU":
+    if palabra[i] not in vocales:
         consonantes += palabra[i]
         print(f"la latra {palabra[i]} se encuentra en la posicion {i}")
 
