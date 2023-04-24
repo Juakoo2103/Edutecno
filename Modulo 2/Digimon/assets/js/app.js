@@ -10,7 +10,7 @@ fetch("https://digimon-api.vercel.app/api/digimon")
     // Crear una tarjeta para cada Digimon y añadirla al contenedor
     data.forEach(function (digimon) {
       var card = document.createElement("div");
-      card.className = "col-sm-12 col-md-4 col-lg-3";
+      card.className = "col-sm-12 col-md-4 col-lg-3 m-0.5";
 
       var innerHTML = `
         
