@@ -3,9 +3,7 @@
 # orden de mayor a menor
 
 
-# DESCOMENTAR PARA COMPROBAR
-
-
+# DESCOMENTAR PARA PROBAR
 # primera forma no se si es la mas apropiada
 
 # def ordenar_numeros(num1, num2, num3):
@@ -40,16 +38,12 @@
 # segunda forma mas apropiada
 
 
-def ordenar_numeros(num1, num2, num3):
-    numeros_ordenados = sorted([num1, num2, num3], reverse=True)
-    return numeros_ordenados
-
-
-# Solicitar al usuario que ingrese tres números diferentes
 num1 = int(input("Ingrese el primer número: "))
 num2 = int(input("Ingrese el segundo número: "))
 num3 = int(input("Ingrese el tercer número: "))
 
-# Llamar a la función y mostrar los números ordenados
-numeros_ordenados = ordenar_numeros(num1, num2, num3)
-print("Los números ordenados de mayor a menor son:", numeros_ordenados)
+if len(set({num1, num2, num3})) != 3:
+    print("debes ingresar tres números diferentes")
+else:
+    numeros_ordenados = sorted([num1, num2, num3], reverse=True)
+    print("Los números ordenados de mayor a menor son:", numeros_ordenados)
