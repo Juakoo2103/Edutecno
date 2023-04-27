@@ -11,4 +11,6 @@ for lista in lista_de_listas:
     if lista[0] == 0:
         continue
     for num in lista:
+        if num == 0:
+            continue
         print(num)
