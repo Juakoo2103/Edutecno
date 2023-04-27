@@ -32,7 +32,7 @@
 # print("======================================================================")
 
 
-    while True:
+while True:
         R1 = input("Ingrese la resistencia 1: ")
         if R1.isdigit():
             R1 = float(R1)
@@ -41,7 +41,7 @@
         else:
             print("Error: Debe ingresar solo números. Intente de nuevo.")
 
-    while True:
+while True:
         R2 = input("Ingrese la resistencia 2: ")
         if R2.isdigit():
             R2 = float(R2)
@@ -50,7 +50,7 @@
         else:
             print("Error: Debe ingresar solo números. Intente de nuevo.")
 
-    while True:
+while True:
         R3 = input("Ingrese la resistencia 3: ")
         if R3.isdigit():
             R3 = float(R3)
@@ -59,9 +59,9 @@
         else:
             print("Error: Debe ingresar solo números. Intente de nuevo.")
 
-    Rt = 1 / ((1/r1) + (1/r2) + (1/r3))
+Rt = 1 / ((1/r1) + (1/r2) + (1/r3))
 
-    print("La resistencia total del circuito es: {:.2f}".format(Rt))
+print("La resistencia total del circuito es: {:.2f}".format(Rt))
 
 
 # Realizar el calculo de la hipotenusa requiriendo el ingreso del cateto a y cateto b por parte del usuario en consola
