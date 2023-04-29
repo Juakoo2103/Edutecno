@@ -62,20 +62,20 @@
 #     else:
 #         print("solo adivinaste", letras_correctas, " letras")
 
-# import random
-# palabras_secretas = ["arroz", "pollo", "pure", "choclo", "chorrillana"]
+import random
+palabras_secretas = ["arroz", "pollo", "pure", "choclo", "chorrillana"]
 
-# adivinanza = random.choice(palabras_secretas)
-# intentos = 5
-# turno = 0
-# ingreso = ""
-# while adivinanza != ingreso and turno < intentos:
-#     ingreso = input("ingresa la palabra para adivinar :")
-#     turno += 1
-#     if ingreso.lower() == adivinanza.lower():
-#         print(f"adivinaste! en  {turno} turno")
-#     elif turno == intentos:
-#         print(
-#             f"no has adivinado y ya no te quedan mas intentos la palabra era {adivinanza}")
-#     else:
-#         print(f"sigue intentando, vas en el turno {turno}/5 ")
+adivinanza = random.choice(palabras_secretas)
+intentos = 5
+turno = 0
+ingreso = ""
+while adivinanza != ingreso and turno < intentos:
+    ingreso = input("ingresa la palabra para adivinar :")
+    turno += 1
+    if ingreso.lower() == adivinanza.lower():
+        print(f"adivinaste! en  {turno} turno")
+    elif turno == intentos:
+        print(
+            f"no has adivinado y ya no te quedan mas intentos la palabra era {adivinanza}")
+    else:
+        print(f"sigue intentando, vas en el turno {turno}/5 ")
