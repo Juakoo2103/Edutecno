@@ -72,8 +72,9 @@ def calculadora():
             if resultado is not None:
                 print("=======================================================")
                 print(
-                    f"|||            el resultado es {resultado}                |||")
+                    f"|||            el resultado es {resultado           }            |||")
                 print("=======================================================")
+                break
         except Exception as e:
             print("Error", e)
 
