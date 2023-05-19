@@ -11,3 +11,12 @@ try:
 
 except ZeroDivisionError as e:
     print(e)
+
+# fuente cascadia code light en mi caso para tener ligaduras
+# ligature = true para activar la ligadura de simbolos
+# ===
+# =>
+# !=
+# <=
+# >=
+
