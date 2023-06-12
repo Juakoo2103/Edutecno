@@ -10,8 +10,9 @@
 
 def agregar_info(texto):
     try:
-        with open('informacion.dat', 'a', encoding='utf-8') as file:
+        with open('9-S9/rebound/informacion.dat', 'w', encoding='utf-8') as file:
             file.write(texto+ '\n')
+            file.close()
 
     except FileNotFoundError:
         print('Error: archivo no encontrado')
