@@ -6,13 +6,13 @@
 # Esteenunanuevalíneaenelarchivo
 # agregandolasegundalíneadelarchivo
 # finalizandolalíneaagregada
-
+from pathlib import Path
 
 def agregar_info(texto):
+    archivo = Path('Modulo 4/9-S9/rebound/rebound.dat')
     try:
-        with open('9-S9/rebound/informacion.dat', 'w', encoding='utf-8') as file:
+        with open(archivo, 'a', encoding='utf-8') as file:
             file.write(texto+ '\n')
-            file.close()
 
     except FileNotFoundError:
         print('Error: archivo no encontrado')
@@ -21,6 +21,6 @@ def agregar_info(texto):
 
 
 agregar_info("Hola mundo")
-agregar_info("Este en una nueva línea en el archivo")
-agregar_info("agregando la segunda línea del archivo")
-agregar_info("finalizando la línea agregada")
+# agregar_info("Este en una nueva línea en el archivo")
+# agregar_info("agregando la segunda línea del archivo")
+# agregar_info("finalizando la línea agregada")
