@@ -38,8 +38,7 @@ FROM peliculas p
 JOIN reparto r ON p.id = r.id_pelicula
 WHERE p.pelicula = 'Titanic';
 
---Listar los 10 directores más populares, indicando su nombre y cuántas películas aparecen 
-en el top 100. 
+--Listar los 10 directores más populares, indicando su nombre y cuántas películas aparecen en el top 100. 
 SELECT p.director, COUNT(*) AS peliculas_en_top_100
 FROM peliculas p
 WHERE p.id IN (
@@ -68,6 +67,7 @@ WHERE p.estreno = (
     SELECT MAX(estreno)
     FROM peliculas
 );
+LIMIT 1;
 
 --Inserte los datos de una nueva película solo en memoria, y otra película en el disco duro. 
 CREATE TEMPORARY TABLE peliculas_temporal(
@@ -81,17 +81,30 @@ INSERT INTO peliculas_temporal (id, pelicula, estreno, director)
 VALUES (1, 'Nueva película en memoria', 2023, 'Director en memoria');
 
 --Actualice 5 directores utilizando ROLLBACK.
-START TRANSACTION;
+BEGIN;
 
-UPDATE peliculas SET director = 'Nuevo director' WHERE id = 1;
-UPDATE peliculas SET director = 'Otro director' WHERE id = 2;
-UPDATE peliculas SET director = 'Tercer director' WHERE id = 3;
-UPDATE peliculas SET director = 'Cuarto director' WHERE id = 4;
-UPDATE peliculas SET director = 'Quinto director' WHERE id = 5;
-
+UPDATE peliculas SET director = CASE director
+    WHEN 'Robert Zemeckis' THEN 'Bob Esponja'
+    WHEN 'James Cameron' THEN 'Mario Bros'
+    WHEN 'Francis Ford Coppola' THEN 'Luigi Bros'
+    WHEN 'Ridley Scott' THEN 'Naruto Uchiha'
+    WHEN 'Peter Jackson' THEN 'Patricio Estrella'
+    ELSE director --Se uiliza para no copiar datos a diferencia de WHERE
+    END;
 ROLLBACK;
+
+UPDATE peliculas SET director = CASE
+    WHEN director LIKE 'Robert Zemeckis' THEN 'Bob Esponja'
+    WHEN director LIKE 'James Cameron' THEN 'Mario Bros'
+    WHEN director LIKE 'Francis Ford Coppola' THEN 'Luigi Bros'
+    WHEN director LIKE 'Ridley Scott' THEN 'Naruto Uchiha'
+    WHEN director LIKE 'Peter Jackson' THEN 'Patricio Estrella'
+    ELSE director --Se uiliza para no copiar datos a diferencia de WHERE
+    END;
+ROLLBACK;
+
 --Inserte 3 actores a la película “Rambo” utilizando SAVEPOINT
-START TRANSACTION;
+BEGIN;
 
 SAVEPOINT insert_actores;
 
